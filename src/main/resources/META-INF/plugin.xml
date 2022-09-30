@@ -1,0 +1,20 @@
+<idea-plugin>
+    <id>ru.sadv1r.marketplace-repository-headers-idea-plugin</id>
+    <name>Marketplace Repository Headers</name>
+    <vendor email="sadv12@gmail.com" url="https://sadv1r.ru">Sadv1r</vendor>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <pluginRepositoryAuthProvider
+                implementation="ru.sadv1r.idea.plugin.marketplace.repository.header.provider.MarketplaceRepositoryHeaderProvider"/>
+
+        <applicationConfigurable
+                parentId="preferences.pluginManager"
+                instance="ru.sadv1r.idea.plugin.marketplace.repository.header.provider.MarketplaceRepositoryHeaderConfigurable"
+                id="ru.sadv1r.idea.plugin.marketplace.repository.header.provider.MarketplaceRepositoryHeaderConfigurable"
+                displayName="Marketplace Repository"/>
+    </extensions>
+</idea-plugin>

@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.7.10'
+    id 'org.jetbrains.intellij' version '1.8.0'
+    id 'org.jetbrains.changelog' version '1.3.1'
+}
+
+group 'ru.sadv1r'
+version = properties['pluginVersion']
+
+repositories {
+    mavenCentral()
+}
+
+kotlin {
+    jvmToolchain {
+        languageVersion.set(JavaLanguageVersion.of(11))
+    }
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version = '2022.1'
+    pluginName = 'Marketplace Repository Headers'
+    updateSinceUntilBuild = false
+}
+
+changelog {
+    version = project.version
+}
+
+patchPluginXml {
+    //https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html#intellij-platform-based-products-of-recent-ide-versions
+    sinceBuild = "221"
+
+    pluginDescription = """
+Provide custom request headers to be used in http requests to marketplace.
+For example, you can use this plugin to provide authorization token to access custom private plugin marketplace mirror.
+<br/>
+<br/>
+<a href="https://github.com/sadv1r/marketplace-repository-headers-idea-plugin">GitHub</a> |
+<a href="https://github.com/sadv1r/marketplace-repository-headers-idea-plugin/issues">Issues</a>
+"""
+
+    changeNotes = changelog.getLatest().toHTML()
+}
