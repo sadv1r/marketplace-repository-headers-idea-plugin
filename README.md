@@ -1,6 +1,6 @@
 # JetBrains Marketplace Repository Headers
-[![Build](https://github.com/sadv1r/marketplace-repository-headers-idea-plugin/workflows/Build/badge.svg?branch=master)](https://github.com/sadv1r/marketplace-repository-headers-idea-plugin/actions?query=workflow%3A%22Build%22)
-[![Latest EAP Compatibility](https://github.com/sadv1r/marketplace-repository-headers-idea-plugin/workflows/Latest%20EAP%20Compatibility/badge.svg?branch=master)](https://github.com/sadv1r/marketplace-repository-headers-idea-plugin/actions?query=workflow%3A%22Latest+EAP+Compatibility%22)
+[![Build](https://github.com/sadv1r/marketplace-repository-headers-idea-plugin/actions/workflows/build.yml/badge.svg)](https://github.com/sadv1r/marketplace-repository-headers-idea-plugin/actions/workflows/build.yml)
+[![Latest EAP Compatibility](https://github.com/sadv1r/marketplace-repository-headers-idea-plugin/actions/workflows/compatibility.yml/badge.svg)](https://github.com/sadv1r/marketplace-repository-headers-idea-plugin/actions/workflows/compatibility.yml)
 [![Known Vulnerabilities](https://snyk.io/test/github/sadv1r/marketplace-repository-headers-idea-plugin/badge.svg?targetFile=build.gradle)](https://snyk.io/test/github/sadv1r/marketplace-repository-headers-idea-plugin?targetFile=build.gradle)
 
 [![JetBrains plugin](https://img.shields.io/jetbrains/plugin/v/20069-marketplace-repository-headers?label=version)](https://plugins.jetbrains.com/plugin/20069-marketplace-repository-headers)
