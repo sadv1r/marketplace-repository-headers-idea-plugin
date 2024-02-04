@@ -1,3 +1,5 @@
+import org.jetbrains.changelog.Changelog
+
 plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.9.22'
@@ -42,5 +44,13 @@ For example, you can use this plugin to provide authorization token to access cu
 <a href="https://github.com/sadv1r/marketplace-repository-headers-idea-plugin/issues">Issues</a>
 """
 
-    changeNotes = changelog.getLatest().toHTML()
+    changeNotes.set(
+            changelog.renderItem(
+                    changelog
+                            .getLatest()
+                            .withHeader(false)
+                            .withEmptySections(false),
+                    Changelog.OutputType.HTML
+            )
+    )
 }
